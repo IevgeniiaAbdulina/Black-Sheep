@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import * as data from '../../data-access/gestalt-data.json';
 
 @Component({
   selector: 'app-about-gestalt',
@@ -7,4 +8,5 @@ import {Component} from '@angular/core';
   styleUrl: './about-gestalt.css',
 })
 export class AboutGestalt {
+  protected readonly gestalt = data;
 }
