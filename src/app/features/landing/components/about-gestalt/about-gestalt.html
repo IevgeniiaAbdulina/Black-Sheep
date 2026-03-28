@@ -1,53 +1,51 @@
-<section id="about-gestalt">
-  <header>
-    <h2>{{ gestalt.title }}</h2>
-  </header>
+<header>
+  <h2>{{ gestalt.title }}</h2>
+</header>
+
+<div>
+  @for (p of gestalt.intro.content; track $index) {
+    <p>{{ p }}</p>
+
+  }
+</div>
+
+<div>
+  <h3>{{ gestalt.relation.title }}</h3>
+
+  @for (p of gestalt.relation.content; track $index) {
+    <p>{{ p }}</p>
+  }
 
   <div>
-    @for (p of gestalt.intro.content; track $index) {
-      <p>{{ p }}</p>
+    <h3>{{ gestalt.achievements.title }}:</h3>
 
-    }
-  </div>
-
-  <div>
-    <h3>{{ gestalt.relation.title }}</h3>
-
-    @for (p of gestalt.relation.content; track $index) {
-      <p>{{ p }}</p>
-    }
-
-    <div>
-      <h3>{{ gestalt.achievements.title }}:</h3>
-
-      <ul>
-        @for (p of gestalt.achievements.key_points; track $index) {
-          <li>{{ p }}</li>
-        }
-      </ul>
-
-      @for (p of gestalt.achievements.content; track $index) {
-        <p>{{ p }}</p>
+    <ul>
+      @for (p of gestalt.achievements.key_points; track $index) {
+        <li>{{ p }}</li>
       }
-    </div>
+    </ul>
 
-    <div>
-      <h3>{{ gestalt.for_whom.title }}</h3>
-
-      <h4>{{ gestalt.for_whom.subtitle }}:</h4>
-      <ul>
-        @for (p of gestalt.for_whom.key_points; track $index) {
-          <li>{{ p }}</li>
-        }
-      </ul>
-    </div>
-  </div>
-
-  <div>
-    <h3>{{ gestalt.advantages.title }}</h3>
-
-    @for (p of gestalt.advantages.content; track $index) {
+    @for (p of gestalt.achievements.content; track $index) {
       <p>{{ p }}</p>
     }
   </div>
-</section>
+
+  <div>
+    <h3>{{ gestalt.for_whom.title }}</h3>
+
+    <h4>{{ gestalt.for_whom.subtitle }}:</h4>
+    <ul>
+      @for (p of gestalt.for_whom.key_points; track $index) {
+        <li>{{ p }}</li>
+      }
+    </ul>
+  </div>
+</div>
+
+<div>
+  <h3>{{ gestalt.advantages.title }}</h3>
+
+  @for (p of gestalt.advantages.content; track $index) {
+    <p>{{ p }}</p>
+  }
+</div>
