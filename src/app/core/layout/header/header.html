@@ -1,13 +1,15 @@
 <nav aria-label="Nawigacja" class="container">
   <ul class="nav__menu">
-    <div class="nav__menu-left">
+
+    <div class="nav-section left">
       <li><a href="/#about-gestalt" aria-label="Przejdź do sekcji Terapia Gestalt">
         Terapia Gestalt</a>
       </li>
       <li><a href="/#about-me" aria-label="Przejdź do sekcji O mnie">O mnie</a></li>
     </div>
-    <div class="nav__menu-center">
-      <li><a href="/home" aria-label="Przejdź do strony głównej">
+
+    <div class="nav-section center">
+      <li><a href="/home" aria-label="Przejdź do strony głównej" class="logo">
         <img
           [ngSrc]="'assets/images/placeholder-mobile.png'"
           width="48"
@@ -17,8 +19,10 @@
         Black Sheep
       </a></li>
     </div>
-    <div class="nav__menu-right">
+
+    <div class="nav-section right">
       <li><a href="/#contact" aria-label="Przejdź do Kontaktu">Kontakt</a></li>
     </div>
+
   </ul>
 </nav>
