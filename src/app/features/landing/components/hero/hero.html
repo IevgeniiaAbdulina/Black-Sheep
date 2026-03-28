@@ -1,6 +1,13 @@
 <div class="container">
   <h1>{{ hero.title }}</h1>
-  <img src="" alt="hero image">
+  <div class="hero-img wrap-center">
+    <img
+      [ngSrc]="'assets/images/placeholder-tablet.png'"
+      width="600"
+      height="640"
+      priority
+      alt="Hero image">
+  </div>
   <p>{{ hero.subtitle }}</p>
 </div>
 
