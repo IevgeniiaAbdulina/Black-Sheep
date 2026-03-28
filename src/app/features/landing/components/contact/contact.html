@@ -1,16 +1,18 @@
-<hr>
+@let individual_price = contact.price_list.individual.price;
+@let individual_time = contact.price_list.individual.time;
+@let couples_price = contact.price_list.couples.price;
+@let couples_time = contact.price_list.couples.time;
+
 <section id="contact">
-  <h2>Kontakt</h2>
+  <h2>{{ contact.title }}</h2>
   <div>
-    <p> Jeśli czujesz, że mogę Cię wesprzeć w Twojej drodze, zapraszam do kontaktu. Chętnie odpowiem
-        na pytania i wspólnie sprawdzimy, czy psychoterapia Gestalt będzie dla Ciebie odpowiednią
-        formą pomocy.</p>
-    <p>Prowadzę gabinet psychoterapii Gestalt we Wrocławiu oraz oferuję możliwość spotkań
-       online.</p>
+    @for (p of contact.content; track $index) {
+      <p>{{ p }}</p>
+    }
   </div>
 
   <div>
-    <p>Gabinet psychoterapii Gestalt – Wrocław Adres: ul. Racławicka 32 Wrocław</p>
+    <h3>Gabinet psychoterapii Gestalt – Wrocław Adres: ul. Racławicka 32 Wrocław</h3>
     <p>Google Maps here...</p>
   </div>
 
@@ -18,16 +20,15 @@
      możliwości.</p>
 
   <div>
-    <h3>Forma pracy Oferuję psychoterapię Gestalt:</h3>
+    <h3>{{ contact.offer.title }}:</h3>
     <ul>
-      <li>dla osób dorosłych</li>
-      <li>par</li>
-      <li>młodzieży od 16 roku życia
-        <button type="button" aria-label="Pobież formularz zgody na terapię dla młodzieży">
-          Formularz zgody na terapię
-        </button>
-      </li>
+      @for (p of contact.offer.key_points; track $index) {
+        <li>{{ p }}</li>
+      }
     </ul>
+    <button type="button" aria-label="Pobież formularz zgody na terapię dla młodzieży">
+      Formularz zgody na terapię
+    </button>
   </div>
 
   <div>
@@ -63,8 +64,8 @@
 
     <h4>Cennik</h4>
     <ul>
-      <li>sesja indywidualna 200 zł / 50 min</li>
-      <li>sesja dla par 300 zł / 60 min</li>
+      <li>sesja indywidualna {{ individual_price }} zł / {{ individual_time }} min</li>
+      <li>sesja dla par {{ couples_price }} zł / {{ couples_time }} min</li>
     </ul>
 
     <h4>Płatność</h4>
@@ -74,4 +75,3 @@
     </ul>
   </div>
 </section>
-<hr>

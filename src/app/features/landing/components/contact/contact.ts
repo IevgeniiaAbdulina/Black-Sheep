@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import * as data from '../../data-access/contact-data.json';
 
 @Component({
   selector: 'app-contact',
@@ -7,4 +8,5 @@ import {Component} from '@angular/core';
   styleUrl: './contact.css',
 })
 export class Contact {
+  protected readonly contact = data;
 }
