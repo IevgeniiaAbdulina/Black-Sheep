@@ -1,0 +1,45 @@
+<nav aria-label="Nawigacja" class="container">
+  <div class="nav__menu">
+
+    <div class="nav-section left">
+      <button><a href="/#about-gestalt" aria-label="Przejdź do sekcji Terapia Gestalt">
+        Terapia Gestalt</a>
+      </button>
+      <button><a href="/#about-me" aria-label="Przejdź do sekcji O mnie">O mnie</a></button>
+    </div>
+
+    <div class="nav-section center">
+      <button><a href="/home" aria-label="Przejdź do strony głównej" class="logo">
+        <img
+          [ngSrc]="'assets/images/placeholder-mobile.png'"
+          width="48"
+          height="48"
+          priority
+          alt="Black Sheep logo image">
+        Black Sheep
+      </a></button>
+    </div>
+
+    <div class="nav-section right">
+      <button><a href="/#contact" aria-label="Przejdź do Kontaktu">Kontakt</a></button>
+    </div>
+
+    <!-- Burger -->
+    <div class="nav-section nav__burger">
+      <button
+        type="button"
+        [aria-label]="isSidenavOpen() ? 'Zamknij menu' : 'Otwórz menu'"
+        class="header-burger-btn burger"
+        [class.active]="isSidenavOpen()"
+        (click)="toggleSidenav()">
+        <div class="burger-box">
+          <div class="burger-inner">
+            <div class="top-bun"></div>
+            <div class="bottom-bun"></div>
+          </div>
+        </div>
+      </button>
+    </div>
+
+  </div>
+</nav>

@@ -1,0 +1,75 @@
+@let individual_price = contact.price_list.individual.price;
+@let individual_time = contact.price_list.individual.time;
+@let couples_price = contact.price_list.couples.price;
+@let couples_time = contact.price_list.couples.time;
+
+<h2>{{ contact.title }}</h2>
+<div>
+  @for (p of contact.content; track $index) {
+    <p>{{ p }}</p>
+  }
+</div>
+
+<div>
+  <h3>Gabinet psychoterapii Gestalt – Wrocław Adres: ul. Racławicka 32 Wrocław</h3>
+  <p>Google Maps here...</p>
+</div>
+
+<p>Pracuję stacjonarnie we Wrocławiu oraz online — w zależności od Twoich potrzeb i
+   możliwości.</p>
+
+<div>
+  <h3>{{ contact.offer.title }}:</h3>
+  <ul>
+    @for (p of contact.offer.key_points; track $index) {
+      <li>{{ p }}</li>
+    }
+  </ul>
+  <button type="button" aria-label="Pobież formularz zgody na terapię dla młodzieży">
+    Formularz zgody na terapię
+  </button>
+</div>
+
+<div>
+  <h3>Sesje mogą odbywać się:</h3>
+  <ul>
+    <li>stacjonarnie w gabinecie we Wrocławiu</li>
+    <li>online</li>
+  </ul>
+</div>
+
+<div>
+  <h3>Kontakt</h3>
+  <ul>
+    <li>E-mail: iv.palka&#64;gmail.com</li>
+    <li>Telefon: 793 290 057</li>
+  </ul>
+</div>
+
+<p>Jeśli nie odbieram telefonu, wyślij SMS lub napisz e-mail — odezwę się w najbliższym możliwym
+   czasie.</p>
+
+<div>
+  <h3>Zapraszam do kontaktu, jeśli:</h3>
+  <ul>
+    <li>przeżywasz trudny moment w swoim życiu</li>
+    <li>szukasz bezpiecznej i empatycznej przestrzeni do rozmowy</li>
+    <li>Tchcesz lepiej zrozumieć siebie, swoje emocje i relacje.</li>
+  </ul>
+</div>
+
+<div>
+  <h3>Ile kosztuje sesja terapeutyczna?</h3>
+
+  <h4>Cennik</h4>
+  <ul>
+    <li>sesja indywidualna {{ individual_price }} zł / {{ individual_time }} min</li>
+    <li>sesja dla par {{ couples_price }} zł / {{ couples_time }} min</li>
+  </ul>
+
+  <h4>Płatność</h4>
+  <ul>
+    <li>gotówka</li>
+    <li>blik</li>
+  </ul>
+</div>

@@ -1,0 +1,39 @@
+<header>
+  <h2>{{ aboutMe.aboutMeIntro.title }}</h2>
+</header>
+
+<ul>
+  @for (p of aboutMe.aboutMeIntro.content; track $index) {
+    <li>{{ p }}</li>
+  }
+</ul>
+
+<div>
+  <h3>{{ aboutMe.withWhom.title }}</h3>
+  <ul>
+    @for (p of aboutMe.withWhom.content; track $index) {
+      <li>{{ p }}</li>
+    }
+  </ul>
+</div>
+
+<div>
+  <h3>{{ aboutMe.approach.title }}</h3>
+  <p>{{ aboutMe.approach.subtitle }}:</p>
+  <ul>
+    @for (p of aboutMe.approach.content; track $index) {
+      <li>{{ p }}</li>
+    }
+  </ul>
+</div>
+
+<ul>
+  @for (p of aboutMe.quote.content; track $index) {
+    <li>{{ p }}</li>
+  }
+</ul>
+
+<div>
+  <p>{{ aboutMe.interaction.title }}</p>
+  <button aria-label="Napisz do mnie">Napisz do mnie</button>
+</div>

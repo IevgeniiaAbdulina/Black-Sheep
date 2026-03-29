@@ -1,0 +1,14 @@
+body {
+  font-family: system-ui, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: var(--line-height-base);
+  color: var(--black);
+  background-color: var(--bg-color);
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}

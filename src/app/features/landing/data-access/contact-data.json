@@ -1,0 +1,25 @@
+{
+  "title": "Kontakt",
+  "content": [
+    "Jeśli czujesz, że mogę Cię wesprzeć w Twojej drodze, zapraszam do kontaktu. Chętnie odpowiem na pytania i wspólnie sprawdzimy, czy psychoterapia Gestalt będzie dla Ciebie odpowiednią formą pomocy.",
+    "Prowadzę gabinet psychoterapii Gestalt we Wrocławiu oraz oferuję możliwość spotkań online."
+  ],
+  "offer": {
+    "title": "Forma pracy Oferuję psychoterapię Gestalt",
+    "key_points": [
+      "dla osób dorosłych",
+      "par",
+      "młodzieży od 16 roku życia"
+    ]
+  },
+  "price_list": {
+    "individual": {
+      "time": "50",
+      "price": "200"
+    },
+    "couples": {
+      "time": "60",
+      "price": "300"
+    }
+  }
+}
