@@ -5,6 +5,7 @@
   flex-direction: column;
 
   @media (max-width: 768px) {
+    margin-top: 10vw;
     padding: 48px 20px;
   }
 }
