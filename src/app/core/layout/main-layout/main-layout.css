@@ -16,3 +16,16 @@ main {
 ::-webkit-scrollbar {
   width: 8px;
 }
+
+.noise {
+  z-index: 999;
+  pointer-events: none;
+  mix-blend-mode: color-burn;
+  will-change: opacity;
+  backface-visibility: hidden;
+  background-image: url(../../../../assets/images/bg_noise.webp);
+  background-position: 50%;
+  background-size: cover;
+  position: fixed;
+  inset: 0;
+}
