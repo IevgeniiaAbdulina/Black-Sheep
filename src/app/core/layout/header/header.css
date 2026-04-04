@@ -41,7 +41,7 @@
 }
 
 a {
-  color: var(--primary-color);
+  color: var(--black);
   transition: opacity 0.2s ease;
 
   &:hover {
@@ -79,7 +79,8 @@ a {
 }
 
 .top-bun, .bottom-bun {
-  height: 1px;
+  height: 2px;
+  border-radius: 8px;
   background-color: var(--black);
 }
 
