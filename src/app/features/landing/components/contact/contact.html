@@ -3,73 +3,143 @@
 @let couples_price = contact.price_list.couples.price;
 @let couples_time = contact.price_list.couples.time;
 
-<h2>{{ contact.title }}</h2>
-<div>
-  @for (p of contact.content; track $index) {
-    <p>{{ p }}</p>
-  }
-</div>
+<h2 id="contact-heading" class="section__title">{{ contact.title }}</h2>
 
-<div>
-  <h3>Gabinet psychoterapii Gestalt – Wrocław Adres: ul. Racławicka 32 Wrocław</h3>
-  <p>Google Maps here...</p>
-</div>
+<div class="cards-grid">
 
-<p>Pracuję stacjonarnie we Wrocławiu oraz online — w zależności od Twoich potrzeb i
-   możliwości.</p>
+  <article
+    class="card"
+    aria-label="Adres gabinetu i mapa Google">
 
-<div>
-  <h3>{{ contact.offer.title }}:</h3>
-  <ul>
-    @for (p of contact.offer.key_points; track $index) {
-      <li>{{ p }}</li>
-    }
-  </ul>
-  <button type="button" aria-label="Pobież formularz zgody na terapię dla młodzieży">
-    Formularz zgody na terapię
-  </button>
-</div>
+    <h3>Gabinet i dojazd</h3>
 
-<div>
-  <h3>Sesje mogą odbywać się:</h3>
-  <ul>
-    <li>stacjonarnie w gabinecie we Wrocławiu</li>
-    <li>online</li>
-  </ul>
-</div>
+    <p>Jeśli czujesz, że mogę Cię wesprzeć w Twojej drodze, zapraszam do kontaktu. Chętnie odpowiem
+       na pytania i wspólnie sprawdzimy, czy psychoterapia Gestalt będzie dla Ciebie odpowiednią
+       formą pomocy.</p>
 
-<div>
-  <h3>Kontakt</h3>
-  <ul>
-    <li>E-mail: iv.palka&#64;gmail.com</li>
-    <li>Telefon: 793 290 057</li>
-  </ul>
-</div>
+    <p><strong>Prowadzę gabinet psychoterapii Gestalt we Wrocławiu</strong> oraz oferuję możliwość
+                                                                            spotkań
+                                                                            online.</p>
 
-<p>Jeśli nie odbieram telefonu, wyślij SMS lub napisz e-mail — odezwę się w najbliższym możliwym
-   czasie.</p>
+    <p><strong>Gabinet psychoterapii Gestalt – Wrocław Adres</strong>:<br>
+                                                                     ul. Racławicka 32 Wrocław</p>
+    <div class="map-wrapper">
+      <!-- Google Maps embed z lokalizacją (Wrocław, przykładowy adres z pinezką) -->
+      <iframe
+        title="Mapa Google z lokalizacją gabinetu przy ul. Racławickiej 32 we Wrocławiu"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2504.898959152245!2d17.072348376713!3d51.115636571667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470fc271cd19d7cd%3A0x3c2b5d7b5d7b5d7b!2sRac%C5%82awicka%2032%2C%2050-001%20Wroc%C5%82aw!5e0!3m2!1spl!2spl!4v1712345678901!5m2!1spl!2spl"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+    <!-- Link do nawigacji z dokładnym adresem docelowym -->
+    <a href="https://www.google.com/maps/dir/?api=1&destination=Rac%C5%82awicka+32%2C+Wroc%C5%82aw"
+       target="_blank" rel="noopener noreferrer" class="nav-link"
+       aria-label="Wyznacz trasę do gabinetu przy ulicy Racławickiej 32 we Wrocławiu">
+      🧭 Wyznacz trasę (nawigacja)
+    </a>
+    <p class="text-lead" style="margin-top: 0.75rem;">Pracuję stacjonarnie we Wrocławiu oraz online
+                                                      — w zależności od Twoich potrzeb i
+                                                      możliwości.</p>
+  </article>
 
-<div>
-  <h3>Zapraszam do kontaktu, jeśli:</h3>
-  <ul>
-    <li>przeżywasz trudny moment w swoim życiu</li>
-    <li>szukasz bezpiecznej i empatycznej przestrzeni do rozmowy</li>
-    <li>Tchcesz lepiej zrozumieć siebie, swoje emocje i relacje.</li>
-  </ul>
-</div>
+  <article
+    class="card"
+    aria-label="Formy pracy i formularz zgody na terapię">
 
-<div>
-  <h3>Ile kosztuje sesja terapeutyczna?</h3>
+    <h3>Forma pracy</h3>
+    <p>Oferuję psychoterapię Gestalt:</p>
 
-  <h4>Cennik</h4>
-  <ul>
-    <li>sesja indywidualna {{ individual_price }} zł / {{ individual_time }} min</li>
-    <li>sesja dla par {{ couples_price }} zł / {{ couples_time }} min</li>
-  </ul>
+    <div class="card-content">
+      <ul>
+        @for (p of contact.offer.key_points; track $index) {
+          <li>{{ p }}</li>
+        }
+      </ul>
+    </div>
 
-  <h4>Płatność</h4>
-  <ul>
-    <li>gotówka</li>
-    <li>blik</li>
-  </ul>
+    <h3 class="subtitle">Sesje mogą odbywać się:</h3>
+    <div class="card-content">
+      <ul>
+        <li>stacjonarnie w gabinecie we Wrocławiu</li>
+        <li>online</li>
+      </ul>
+    </div>
+
+    <a
+      download
+      href="assets/images/placeholder-mobile.png"
+      aria-label="Pobież formularz zgody na terapię dla młodzieży w formacie PDF">
+      <app-button type="button" buttonClass="action-button">
+        📄 Pobierz formularz zgody na terapię (PDF)
+      </app-button>
+    </a>
+
+  </article>
+
+  <article
+    class="card"
+    aria-label="Dane kontaktowe i sytuacje, w których warto się zgłosić">
+
+    <h3>Kontakt</h3>
+    <div class="contact-details">
+      <p>📧
+        <a
+          href="mailto:iv.palka@gmail.com"
+          aria-label="Wyślij e-mail na adres iv.palka@gmail.com">
+          iv.palka&#64;gmail.com
+        </a><br>
+         📞
+        <a
+          href="tel:793 290 057"
+          aria-label="Zadzwoń pod numer telefonu 793 290 057">
+          793 290 057
+        </a></p>
+
+      <p>Jeśli nie odbieram telefonu, wyślij SMS lub napisz e-mail — odezwę się w najbliższym
+         możliwym
+         czasie.</p>
+    </div>
+    <hr>
+
+    <h3>Zapraszam do kontaktu, jeśli:</h3>
+    <div class="card-content">
+      <ul>
+        <li>przeżywasz trudny moment w swoim życiu</li>
+        <li>szukasz bezpiecznej i empatycznej przestrzeni do rozmowy</li>
+        <li>chcesz lepiej zrozumieć siebie, swoje emocje i relacje.</li>
+      </ul>
+    </div>
+  </article>
+
+  <article
+    class="card"
+    aria-label="Cennik sesji i formy płatności">
+    <h3>Ile kosztuje sesja terapeutyczna?</h3>
+
+    <h4>Cennik</h4>
+    <ul class="list">
+      <li>💰 sesja indywidualna <strong>{{ individual_price }} zł</strong> / {{ individual_time }}
+          min
+      </li>
+      <li>💑 sesja dla par <strong>{{ couples_price }} zł</strong> / {{ couples_time }} min</li>
+    </ul>
+
+    <h4>Płatność</h4>
+    <ul class="list">
+      <li>💵 gotówka</li>
+      <li>📱 blik</li>
+    </ul>
+
+    <p class="ending">*Szczegóły dotyczące płatności oraz ewentualnych faktur — do uzgodnienia
+                      indywidualnie.</p>
+  </article>
+
+  <div
+    class="footer"
+    aria-label="Podsumowanie – elastyczność spotkań">
+    <p style="margin: 0;">✔️ Spotkania stacjonarne (Wrocław) oraz online – działam w zależności od
+                          Twoich potrzeb i możliwości.</p>
+  </div>
 </div>

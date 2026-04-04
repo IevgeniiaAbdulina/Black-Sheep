@@ -15,36 +15,6 @@ h1, h2, h3 {
   margin-bottom: 1rem;
 }
 
-/* Card typography */
-.card h3 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-top: 0.2rem;
-  margin-bottom: 1rem;
-  color: #9b4b2e;
-  border-left: 3px solid #e2bc9a;
-  padding-left: 0.75rem;
-}
-
-.card p {
-  margin-bottom: 1rem;
-  color: #2c3e2f;
-}
-
-.card ul {
-  margin: 0.75rem 0 1rem 1.5rem;
-  color: #2c3e2f;
-}
-
-.card li {
-  margin-bottom: 0.5rem;
-}
-
-.card strong {
-  color: #b35f3a;
-  font-weight: 600;
-}
-
 /* Accents and additional styling */
 .text-lead {
   font-size: 1.05rem;

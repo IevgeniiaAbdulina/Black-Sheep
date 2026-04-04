@@ -1,0 +1,44 @@
+.subtitle {
+  font-size: 1.3rem;
+  margin-top: 0.75rem;
+}
+
+h4 {
+  font-weight: 600;
+  margin: 0.75rem 0 0.25rem;
+  color: #9b4b2e;
+}
+
+.list {
+  list-style-type: none;
+  margin-left: 0;
+}
+
+.ending {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.footer {
+  margin-top: 2rem;
+  background: #f9f5ef;
+  border-radius: 1.25rem;
+  padding: 1.25rem;
+  text-align: center;
+}
+
+/* kontakt info */
+.contact-details {
+  margin: 0.5rem 0;
+}
+
+.contact-details a {
+  color: #b8734f;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-details a:hover {
+  text-decoration: underline;
+}
+
