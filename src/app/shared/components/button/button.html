@@ -1,0 +1,7 @@
+<button
+  [type]="type()"
+  [aria-label]="ariaLabel()"
+  [ngClass]="buttonClass()"
+  (click)="buttonAction.emit()">
+  <ng-content></ng-content>
+</button>
