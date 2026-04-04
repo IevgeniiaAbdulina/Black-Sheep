@@ -1,39 +1,64 @@
-<header>
-  <h2>{{ aboutMe.aboutMeIntro.title }}</h2>
-</header>
+<div class="cards-grid">
+  <h2 id="about-heading" class="section__title">{{ aboutMe.aboutMeIntro.title }}</h2>
 
-<ul>
-  @for (p of aboutMe.aboutMeIntro.content; track $index) {
-    <li>{{ p }}</li>
-  }
-</ul>
-
-<div>
-  <h3>{{ aboutMe.withWhom.title }}</h3>
-  <ul>
-    @for (p of aboutMe.withWhom.content; track $index) {
-      <li>{{ p }}</li>
+  <article
+    class="card"
+    aria-label="Wprowadzenie – moje wartości terapeutyczne">
+    @for (p of aboutMe.aboutMeIntro.content; track $index; let lead = $first) {
+      <p [ngClass]="lead ? 'text-lead' : ''">{{ p }}</p>
     }
-  </ul>
-</div>
+  </article>
 
-<div>
-  <h3>{{ aboutMe.approach.title }}</h3>
-  <p>{{ aboutMe.approach.subtitle }}:</p>
-  <ul>
-    @for (p of aboutMe.approach.content; track $index) {
-      <li>{{ p }}</li>
-    }
-  </ul>
-</div>
+  <article
+    class="card"
+    aria-label="Z kim pracuję – grupy i wyzwania">
+    <h3>{{ aboutMe.withWhom.title }}</h3>
+    <div class="card-content">
+      <ul>
+        @for (p of aboutMe.withWhom.content; track $index) {
+          <li>{{ p }}</li>
+        }
+      </ul>
+    </div>
+  </article>
 
-<ul>
-  @for (p of aboutMe.quote.content; track $index) {
-    <li>{{ p }}</li>
-  }
-</ul>
+  <article
+    class="card"
+    aria-label="Podejście terapeutyczne – metody i techniki">
+    <h3>{{ aboutMe.approach.title }}</h3>
+    <p>{{ aboutMe.approach.subtitle }}:</p>
 
-<div>
-  <p>{{ aboutMe.interaction.title }}</p>
-  <button aria-label="Napisz do mnie">Napisz do mnie</button>
+    <div class="card-content">
+      <ul>
+        @for (p of aboutMe.approach.content; track $index) {
+          <li>{{ p }}</li>
+        }
+      </ul>
+    </div>
+
+    <p>{{ aboutMe.approach.ending }}</p>
+  </article>
+
+  <article
+    class="card"
+    aria-label="Fundament mojej pracy i kontakt">
+
+    <div class="card-content">
+      <ul>
+        @for (p of aboutMe.quote.content; track $index) {
+          <li>{{ p }}</li>
+        }
+      </ul>
+    </div>
+
+    <p>{{ aboutMe.interaction.title }}</p>
+
+    <app-button
+      type="button"
+      buttonClass="action-button"
+      ariaLabel="Napisz do mnie – otwórz formularz kontaktowy lub wyślij wiadomość"
+      (click)="getContact()">
+      📧 Napisz do mnie
+    </app-button>
+  </article>
 </div>

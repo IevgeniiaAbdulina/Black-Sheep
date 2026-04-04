@@ -4,3 +4,95 @@
   margin: 0 auto;
   padding: 0 clamp(1rem, 5vw, 3rem);
 }
+
+.section {
+  margin-bottom: 4rem;
+  scroll-margin-top: 1.5rem;
+}
+
+.section:last-child {
+  margin-bottom: 0;
+}
+
+.section__title {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  border-left: 6px solid #b8734f;
+  padding-left: 1rem;
+  margin-bottom: 2rem;
+  color: #2c3e2f;
+  line-height: 1.2;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 1.75rem;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 1.25rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, 0.02);
+  padding: 1.6rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid #e9e2d9;
+}
+
+.card-content li {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+  font-size: 0.98rem;
+  line-height: 1.45;
+}
+
+.card-content li::before {
+  content: "✦";
+  color: #eab308;
+  font-weight: 600;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.12);
+  border-color: #d9cbbc;
+}
+
+.card .action-button {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .container {
+    padding: 1.25rem;
+  }
+
+  .section__title {
+    font-size: 1.75rem;
+  }
+
+  .card {
+    padding: 1.2rem;
+  }
+
+  .card h3 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Focus is visible for the entire page */
+:focus-visible {
+  outline: 3px solid #b8734f;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
