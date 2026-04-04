@@ -1,51 +1,78 @@
-<header>
-  <h2>{{ gestalt.title }}</h2>
-</header>
+<h2
+  id="gestalt-heading"
+  class="section__title">
+  {{ gestalt.title }}
+</h2>
 
-<div>
-  @for (p of gestalt.intro.content; track $index) {
-    <p>{{ p }}</p>
+<div class="cards-grid">
+  <article
+    class="card"
+    aria-label="Czym jest terapia Gestalt – podstawy humanistyczne">
+    @for (p of gestalt.intro.content; track $index) {
+      <p>{{ p }}</p>
 
-  }
-</div>
+    }
+  </article>
 
-<div>
-  <h3>{{ gestalt.relation.title }}</h3>
+  <article
+    class="card"
+    aria-label="Jak działa terapia Gestalt – relacja i odkrywanie">
+    <h3>{{ gestalt.relation.title }}</h3>
 
-  @for (p of gestalt.relation.content; track $index) {
-    <p>{{ p }}</p>
-  }
+    @for (p of gestalt.relation.content; track $index) {
+      <p>{{ p }}</p>
+    }
 
-  <div>
+  </article>
+
+  <article
+    class="card"
+    aria-label="Podczas sesji terapii Gestalt – świadomość, eksperymenty">
     <h3>{{ gestalt.achievements.title }}:</h3>
 
-    <ul>
-      @for (p of gestalt.achievements.key_points; track $index) {
-        <li>{{ p }}</li>
-      }
-    </ul>
+    <div class="card-content">
+      <ul>
+        @for (p of gestalt.achievements.key_points; track $index) {
+          <li>{{ p }}</li>
+        }
+      </ul>
+    </div>
 
     @for (p of gestalt.achievements.content; track $index) {
       <p>{{ p }}</p>
     }
-  </div>
+  </article>
 
-  <div>
-    <h3>{{ gestalt.for_whom.title }}</h3>
+  <article
+    class="card"
+    aria-label="Dla kogo jest terapia Gestalt – trudności i potrzeby">
+    <h3>{{ gestalt.for_whom.title }}?</h3>
 
     <h4>{{ gestalt.for_whom.subtitle }}:</h4>
-    <ul>
-      @for (p of gestalt.for_whom.key_points; track $index) {
-        <li>{{ p }}</li>
-      }
-    </ul>
-  </div>
-</div>
+    <div class="card-content">
+      <ul>
+        @for (p of gestalt.for_whom.key_points; track $index) {
+          <li>{{ p }}</li>
+        }
+      </ul>
+    </div>
+  </article>
 
-<div>
-  <h3>{{ gestalt.advantages.title }}</h3>
+  <article
+    class="card"
+    aria-label="Efekty terapii Gestalt i kontakt">
+    <h3>{{ gestalt.advantages.title }}?</h3>
 
-  @for (p of gestalt.advantages.content; track $index) {
-    <p>{{ p }}</p>
-  }
+    @for (p of gestalt.advantages.content; track $index) {
+      <p>{{ p }}</p>
+    }
+
+    <app-button
+      type="button"
+      buttonClass="action-button"
+      ariaLabel="Skontaktuj się w sprawie terapii Gestalt – zapytanie o sesję"
+      (click)="getContact()">
+      Skontaktuj się
+    </app-button>
+  </article>
 </div>
