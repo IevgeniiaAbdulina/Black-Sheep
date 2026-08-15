@@ -1,13 +1,8 @@
 :host {
-  padding: 80px 60px;
-
+  margin-top: clamp(1.25rem, -0.11rem + 6.82vw, 5rem);
+  padding: clamp(3rem, 2.27rem + 3.64vw, 5rem) clamp(1rem, 0.45rem + 2.73vw, 2.5rem);
   display: flex;
   flex-direction: column;
-
-  @media (max-width: 768px) {
-    margin-top: 10vw;
-    padding: 48px 20px;
-  }
 }
 
 .container {
@@ -15,15 +10,15 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 16px;
+  gap: var(--gutter-md);
   text-align: center;
 }
 
-.block-wrapper {
+.actions-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 16px;
+  gap: var(--gutter-md);
 }
 
 .hero-img {
@@ -38,6 +33,36 @@
   justify-content: center;
 }
 
-h1 {
-  font-size: 3.6vw;
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gutter-md);
+}
+
+.hero-header {
+  font-size: clamp(1rem, 0.82rem + 0.91vw, 1.5rem);
+  font-weight: 700;
+}
+
+/* Mobile devices - Covered by default CSS layout rules */
+
+/* Tablets / Small Laptops */
+@media (min-width: 768px) {
+}
+
+/* Standard Desktops */
+@media (min-width: 1024px) {
+  .hero {
+    flex-direction: row;
+    padding: 20px 0;
+
+    & > * {
+      flex: 1;
+    }
+  }
+}
+
+/* Large Desktop Displays */
+@media (min-width: 1440px) {
 }

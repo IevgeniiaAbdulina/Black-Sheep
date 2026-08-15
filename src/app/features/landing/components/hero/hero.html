@@ -1,5 +1,4 @@
-<div class="container">
-  <h1>{{ hero.title }}</h1>
+<div class="container hero">
   <div class="hero-img wrap-center">
     <img
       [ngSrc]="'assets/images/placeholder-tablet.png'"
@@ -8,10 +7,26 @@
       priority
       alt="Hero image">
   </div>
-  <p>{{ hero.subtitle }}</p>
+
+  <div class="hero-content">
+    <div class="hero-header">
+      <span>{{ hero.title }}</span>
+    </div>
+
+    <div class="hero-footer">
+      <p>{{ hero.subtitle }}</p>
+      <div class="actions-wrapper">
+        <app-button type="button"
+                    buttonClass="btn action-button">
+          Skontaktuj się
+        </app-button>
+        <app-button type="button"
+                    buttonClass="btn secondary-button">
+          Więcej o Gestalt
+        </app-button>
+      </div>
+    </div>
+  </div>
 </div>
 
-<div class="block-wrapper">
-  <app-button type="button" buttonClass="btn action-button">Skontaktuj się</app-button>
-  <app-button type="button" buttonClass="btn secondary-button"> Czytaj więcej o Gestalt</app-button>
-</div>
+
