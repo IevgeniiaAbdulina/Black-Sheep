@@ -25,6 +25,6 @@ export class Header {
   }
 
   goToAboutGestalt(): void {
-    this.router.navigate(['/'], {fragment: 'about-gestalt'});
+    this.router.navigate(['/about-gestalt']);
   }
 }
