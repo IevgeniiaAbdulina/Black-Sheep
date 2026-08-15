@@ -10,7 +10,7 @@
   border-bottom-right-radius: 1.6vw;
   border-bottom-left-radius: 1.6vw;
   inset: 0 0 auto;
-  z-index: 1000;
+  z-index: 2;
 }
 
 .nav-section {
@@ -46,7 +46,11 @@ a {
 
   &:hover {
     opacity: 0.8;
-    text-decoration: underline;
+    text-decoration: none;
+  }
+
+  &.logo:focus {
+    outline: none;
   }
 }
 
