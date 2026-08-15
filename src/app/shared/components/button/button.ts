@@ -12,6 +12,7 @@ import {NgClass} from '@angular/common';
 export class Button {
   type = input<'button' | 'submit'>('button');
   ariaLabel = input<string>('');
+  disabled = input<boolean>(false);
   buttonClass = input<string>('');
   buttonAction = output();
 }
