@@ -2,7 +2,6 @@
   <h2 id="about-heading" class="section__title">{{ aboutMe.aboutMeIntro.title }}</h2>
 
   <article
-    class="card"
     aria-label="Wprowadzenie – moje wartości terapeutyczne">
     @for (p of aboutMe.aboutMeIntro.content; track $index; let lead = $first) {
       <p [ngClass]="lead ? 'text-lead' : ''">{{ p }}</p>
@@ -10,16 +9,24 @@
   </article>
 
   <article
-    class="card"
     aria-label="Z kim pracuję – grupy i wyzwania">
     <h3>{{ aboutMe.withWhom.title }}</h3>
-    <div class="card-content">
-      <ul>
-        @for (p of aboutMe.withWhom.content; track $index) {
-          <li>{{ p }}</li>
+
+    @if (!cards()) {
+      <span>Bardziej szczegółowe informacje będą dostępne wkrótce.</span>
+    } @else {
+      <div class="card-container">
+        @for (card of cards(); track card.id) {
+          <div class="custom-card">
+            @if (!card.description) {
+              {{ card.id }}
+            } @else {
+              {{ card.description }}
+            }
+          </div>
         }
-      </ul>
-    </div>
+      </div>
+    }
   </article>
 
   <article
@@ -55,7 +62,7 @@
 
     <app-button
       type="button"
-      buttonClass="action-button"
+      buttonClass="btn action-button"
       ariaLabel="Napisz do mnie – otwórz formularz kontaktowy lub wyślij wiadomość"
       (click)="getContact()">
       📧 Napisz do mnie
