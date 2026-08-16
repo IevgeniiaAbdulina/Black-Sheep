@@ -18,10 +18,10 @@
       <div class="card-container">
         @for (card of cards(); track card.id) {
           <div class="custom-card">
-            @if (!card.description) {
-              {{ card.id }}
+            @if (!card.src) {
+              <span>{{ card.description }}</span>
             } @else {
-              {{ card.description }}
+              <img [ngSrc]="card.src" width="512" height="512" [alt]="card.name">
             }
           </div>
         }
