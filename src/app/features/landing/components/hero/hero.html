@@ -17,11 +17,13 @@
       <p>{{ hero.subtitle }}</p>
       <div class="actions-wrapper">
         <app-button type="button"
-                    buttonClass="btn action-button">
+                    buttonClass="btn action-button"
+                    (buttonAction)="goToContact()">
           Skontaktuj się
         </app-button>
         <app-button type="button"
-                    buttonClass="btn secondary-button">
+                    buttonClass="btn secondary-button"
+                    (buttonAction)="goToTherapy()">
           Więcej o Gestalt
         </app-button>
       </div>
