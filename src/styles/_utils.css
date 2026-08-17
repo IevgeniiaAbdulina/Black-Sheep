@@ -8,6 +8,15 @@
 .section {
   margin-bottom: 4rem;
   scroll-margin-top: 1.5rem;
+  scroll-behavior: smooth;
+}
+
+.section[id]::before {
+  content: "";
+  display: block;
+  height: 120px;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .section:last-child {
