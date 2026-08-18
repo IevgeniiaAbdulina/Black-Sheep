@@ -18,7 +18,7 @@ export class Hero {
     this.router.navigate(['/'], {fragment: 'contact'});
   }
 
-  goToTherapy(): void {
-    this.router.navigate(['/'], {fragment: 'about-gestalt'});
+  goToAboutGestalt(): void {
+    this.router.navigate(['/about-gestalt']);
   }
 }
