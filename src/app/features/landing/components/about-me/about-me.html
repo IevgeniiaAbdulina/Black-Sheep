@@ -1,11 +1,35 @@
 <div class="cards-grid">
-  <h2 id="about-heading" class="section__title">{{ aboutMe.aboutMeIntro.title }}</h2>
+  <h2 id="about-heading" class="section__title">O mnie</h2>
+
+  <p>Nieustannie rozwijam swoje umiejętności, uczestnicząc w szkoleniach i warsztatach, aby móc
+     oferować rzetelne, empatyczne i skuteczne wsparcie.</p>
+
+  <article
+    class="card"
+    aria-label="Dane kontaktowe i sytuacje, w których warto się zgłosić">
+
+    <h3>Zapraszam do kontaktu, jeśli:</h3>
+    <div class="card-content">
+      <ul>
+        <li>przeżywasz trudny moment w swoim życiu</li>
+        <li>szukasz bezpiecznej i empatycznej przestrzeni do rozmowy</li>
+        <li>chcesz lepiej zrozumieć siebie, swoje emocje i relacje.</li>
+      </ul>
+    </div>
+  </article>
 
   <article
     aria-label="Wprowadzenie – moje wartości terapeutyczne">
     @for (p of aboutMe.aboutMeIntro.content; track $index; let lead = $first) {
       <p [ngClass]="lead ? 'text-lead' : ''">{{ p }}</p>
     }
+    <p>W swojej pracy kieruję się głębokim przekonaniem, że każdy człowiek zasługuje na zauważenie,
+       zrozumienie i akceptację —szczególnie w momentach, gdy doświadcza trudności emocjonalnych lub
+       życiowych kryzysów. </p>
+    <br>
+    <p>Psychoterapia Gestalt jest dla mnie przede wszystkim relacją opartą na zaufaniu i
+       autentycznym kontakcie. To bezpieczna przestrzeń, w której możesz eksplorować siebie, swoje
+       emocje, potrzeby i doświadczenia — w tempie zgodnym z Tobą.</p>
   </article>
 
   <article
@@ -33,6 +57,10 @@
     class="card"
     aria-label="Podejście terapeutyczne – metody i techniki">
     <h3>{{ aboutMe.approach.title }}</h3>
+    <p>Fundamentem mojej pracy jako psychoterapeutki jest uważne towarzyszenie klientom w
+       poszerzaniu ich świadomości — uczuć, myśli, potrzeb i sygnałów płynących z ciała. W
+       atmosferze zaufania i akceptacji wspólnie szukamy drogi klienta do większego kontaktu ze
+       sobą, równowagi i dobrostanu.</p>
     <p>{{ aboutMe.approach.subtitle }}:</p>
 
     <div class="card-content">
@@ -65,7 +93,7 @@
       buttonClass="btn action-button"
       ariaLabel="Napisz do mnie – otwórz formularz kontaktowy lub wyślij wiadomość"
       (click)="getContact()">
-      📧 Napisz do mnie
+      Napisz do mnie
     </app-button>
   </article>
 </div>
