@@ -36,6 +36,10 @@
   align-items: center;
 }
 
+.actions-wrapper {
+  width: fit-content;
+}
+
 /* Tablets / Small Laptops */
 @media (min-width: 768px) {
   .card-container {

@@ -1,5 +1,4 @@
 .content-wrapper {
   display: flex;
   flex-direction: column;
-  gap: clamp(4rem, 12vw, 10rem);
 }

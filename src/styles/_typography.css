@@ -2,7 +2,7 @@ body {
   /*font-family: system-ui, sans-serif;*/
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: var(--line-height-base);
   color: var(--black);
   background-color: var(--bg-color);
@@ -20,4 +20,8 @@ h1, h2, h3 {
   font-size: 1.05rem;
   font-weight: 500;
   color: #4a5b4b;
+}
+
+p {
+  margin-bottom: 1rem;
 }

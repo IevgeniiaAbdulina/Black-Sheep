@@ -1,32 +1,14 @@
 <div class="cards-grid">
   <h2 id="about-heading" class="section__title">O mnie</h2>
 
-  <p>Nieustannie rozwijam swoje umiejętności, uczestnicząc w szkoleniach i warsztatach, aby móc
-     oferować rzetelne, empatyczne i skuteczne wsparcie.</p>
-
-  <article
-    class="card"
-    aria-label="Dane kontaktowe i sytuacje, w których warto się zgłosić">
-
-    <h3>Zapraszam do kontaktu, jeśli:</h3>
-    <div class="card-content">
-      <ul>
-        <li>przeżywasz trudny moment w swoim życiu</li>
-        <li>szukasz bezpiecznej i empatycznej przestrzeni do rozmowy</li>
-        <li>chcesz lepiej zrozumieć siebie, swoje emocje i relacje.</li>
-      </ul>
-    </div>
-  </article>
-
   <article
     aria-label="Wprowadzenie – moje wartości terapeutyczne">
-    @for (p of aboutMe.aboutMeIntro.content; track $index; let lead = $first) {
-      <p [ngClass]="lead ? 'text-lead' : ''">{{ p }}</p>
-    }
-    <p>W swojej pracy kieruję się głębokim przekonaniem, że każdy człowiek zasługuje na zauważenie,
-       zrozumienie i akceptację —szczególnie w momentach, gdy doświadcza trudności emocjonalnych lub
+
+    <p>W swojej pracy kieruję się głębokim przekonaniem, że każdy człowiek zasługuje na
+       zauważenie,
+       zrozumienie i akceptację —szczególnie w momentach, gdy doświadcza trudności emocjonalnych
+       lub
        życiowych kryzysów. </p>
-    <br>
     <p>Psychoterapia Gestalt jest dla mnie przede wszystkim relacją opartą na zaufaniu i
        autentycznym kontakcie. To bezpieczna przestrzeń, w której możesz eksplorować siebie, swoje
        emocje, potrzeby i doświadczenia — w tempie zgodnym z Tobą.</p>
@@ -34,7 +16,7 @@
 
   <article
     aria-label="Z kim pracuję – grupy i wyzwania">
-    <h3>{{ aboutMe.withWhom.title }}</h3>
+    <h3>Z kim pracuję</h3>
 
     @if (!cards()) {
       <span>Bardziej szczegółowe informacje będą dostępne wkrótce.</span>
@@ -56,44 +38,49 @@
   <article
     class="card"
     aria-label="Podejście terapeutyczne – metody i techniki">
-    <h3>{{ aboutMe.approach.title }}</h3>
+    <h3>Podejście terapeutyczne</h3>
+
     <p>Fundamentem mojej pracy jako psychoterapeutki jest uważne towarzyszenie klientom w
        poszerzaniu ich świadomości — uczuć, myśli, potrzeb i sygnałów płynących z ciała. W
        atmosferze zaufania i akceptacji wspólnie szukamy drogi klienta do większego kontaktu ze
        sobą, równowagi i dobrostanu.</p>
-    <p>{{ aboutMe.approach.subtitle }}:</p>
+    <p>W swojej praktyce integruję różne podejścia terapeutyczne pozostając
+       zakorzeniona w nurcie terapii Gestalt. Korzystam m.in. z:,
+    </p>
 
     <div class="card-content">
       <ul>
-        @for (p of aboutMe.approach.content; track $index) {
-          <li>{{ p }}</li>
-        }
+        <li><p>technik projekcyjnych (rysunek, praca z kartami)</p></li>
+        <li><p>elementów pracy z ciałem i uważności somatycznej</p></li>
+        <li><p>terapii w piaskownicy (sandplay), dostosowaną do potrzeb osób dorosłych</p></li>
       </ul>
+
+      <p>Nieustannie rozwijam swoje umiejętności, uczestnicząc w szkoleniach i warsztatach, aby
+         móc
+         oferować rzetelne, empatyczne i skuteczne wsparcie.</p>
     </div>
 
-    <p>{{ aboutMe.approach.ending }}</p>
-  </article>
+    <article
+      aria-label="Dane kontaktowe i sytuacje, w których warto się zgłosić">
 
-  <article
-    class="card"
-    aria-label="Fundament mojej pracy i kontakt">
+      <h3>Zapraszam do kontaktu, jeśli:</h3>
+      <div class="card-content">
+        <ul>
+          <li>przeżywasz trudny moment w swoim życiu</li>
+          <li>szukasz bezpiecznej i empatycznej przestrzeni do rozmowy</li>
+          <li>chcesz lepiej zrozumieć siebie, swoje emocje i relacje.</li>
+        </ul>
+      </div>
 
-    <div class="card-content">
-      <ul>
-        @for (p of aboutMe.quote.content; track $index) {
-          <li>{{ p }}</li>
-        }
-      </ul>
-    </div>
-
-    <p>{{ aboutMe.interaction.title }}</p>
-
-    <app-button
-      type="button"
-      buttonClass="btn action-button"
-      ariaLabel="Napisz do mnie – otwórz formularz kontaktowy lub wyślij wiadomość"
-      (click)="getContact()">
-      Napisz do mnie
-    </app-button>
+      <div class="actions-wrapper">
+        <app-button
+          type="button"
+          buttonClass="btn action-button"
+          ariaLabel="Napisz do mnie – otwórz formularz kontaktowy lub wyślij wiadomość"
+          (click)="getContact()">
+          Napisz do mnie
+        </app-button>
+      </div>
+    </article>
   </article>
 </div>
