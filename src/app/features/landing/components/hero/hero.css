@@ -16,8 +16,7 @@
 
 .actions-wrapper {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
   gap: var(--gutter-md);
 }
 
@@ -60,6 +59,11 @@
     & > * {
       flex: 1;
     }
+  }
+
+  .actions-wrapper {
+    flex-direction: row;
+    justify-content: center;
   }
 }
 
