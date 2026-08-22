@@ -11,7 +11,6 @@
   align-items: center;
   justify-content: center;
   gap: var(--gutter-md);
-  text-align: center;
 }
 
 .actions-wrapper {
@@ -26,6 +25,7 @@
   object-fit: cover;
 
   img {
+    width: 350px;
     z-index: 1000;
   }
 }
@@ -39,13 +39,23 @@
 .hero-content {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: var(--gutter-md);
+  gap: var(--gutter);
 }
 
 .hero-header {
-  font-size: clamp(1rem, 0.82rem + 0.91vw, 1.5rem);
+  width: 100%;
+  font-size: clamp(1.5rem, 1.125rem + 1.5vw, 3.25rem);
   font-weight: 700;
+
+  & > * {
+    color: var(--dark-blue);
+  }
+}
+
+.hero-subtitle {
+  p {
+    color: var(--light-black)
+  }
 }
 
 /* Mobile devices - Covered by default CSS layout rules */
@@ -67,7 +77,6 @@
 
   .actions-wrapper {
     flex-direction: row;
-    justify-content: center;
   }
 }
 
@@ -79,10 +88,6 @@
   display: flex;
   align-items: center;
   gap: var(--gutter-md);
-
-  h3 {
-    color: var(--light-black)
-  }
 
   & > * {
     display: flex;
@@ -122,5 +127,37 @@
 
   .color-7 {
     background-color: var(--orange);
+  }
+
+  .color-8 {
+    background-color: var(--indigo-violet);
+  }
+
+  .color-9 {
+    background-color: var(--dark-blue);
+  }
+}
+
+.color-text {
+  color: var(--light-black);
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.indigo-violet {
+  color: var(--indigo-violet);
+}
+
+.dark-blue {
+  color: var(--dark-blue);
+}
+
+.deco-01 {
+  position: absolute;
+  transform: rotate(330deg);
+  z-index: -1;
+
+  img {
+    transform: scale(0.5);
   }
 }

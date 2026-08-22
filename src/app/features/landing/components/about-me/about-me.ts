@@ -1,7 +1,7 @@
 import {Component, signal} from '@angular/core';
 import * as data from '../../data-access/about-me-data.json';
 import {Button} from '../../../../shared/components/button/button';
-import {NgClass, NgOptimizedImage} from '@angular/common';
+import {NgOptimizedImage} from '@angular/common';
 import {MatCardModule} from '@angular/material/card';
 
 interface CardData {
@@ -15,7 +15,6 @@ interface CardData {
   selector: 'app-about-me',
   imports: [
     Button,
-    NgClass,
     MatCardModule,
     NgOptimizedImage
   ],
