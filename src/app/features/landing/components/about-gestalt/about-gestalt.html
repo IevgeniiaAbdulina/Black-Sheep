@@ -6,59 +6,94 @@
   <h2
     id="gestalt-heading"
     class="section__title">
-    {{ gestalt.title }}
+    Terapia Gestalt – czym jest i jak działa psychoterapia Gestalt?
   </h2>
 
   <div class="cards-grid">
     <article
       class="card"
       aria-label="Czym jest terapia Gestalt – podstawy humanistyczne">
-      @for (p of gestalt.intro.content; track $index) {
-        <p>{{ p }}</p>
-
-      }
+      <p>Terapia Gestalt to nurt psychoterapii humanistyczno-doświadczeniowej, który koncentruje się
+         na świadomości, autentycznym kontakcie i odpowiedzialności za własne życie. Jej nazwa
+         pochodzi od niemieckiego słowa Gestalt, oznaczającego „całość” — ponieważ w psychoterapii
+         Gestalt ważne jest spojrzenie na człowieka jako na spójną całość: ciało, emocje, myśli i
+         relacje z innymi ludźmi.
+      </p>
+      <p>
+        W terapii Gestalt nie chodzi o analizowanie problemów w oderwaniu od codziennego życia, lecz
+        o zrozumienie, jak doświadczasz siebie i świata tu i teraz. To właśnie w teraźniejszości
+        ujawniają się wzorce zachowań, emocje i potrzeby, które często mają swoje źródło w
+        przeszłych doświadczeniach.
+      </p>
     </article>
 
     <article
       class="card"
       aria-label="Jak działa terapia Gestalt – relacja i odkrywanie">
-      <h3>{{ gestalt.relation.title }}</h3>
+      <h3>Jak działa terapia Gestalt?</h3>
 
-      @for (p of gestalt.relation.content; track $index) {
-        <p>{{ p }}</p>
-      }
-
+      <p>
+        Terapia Gestalt bazuje się na relacji terapeutycznej — bezpiecznej, autentycznej i opartej
+        na dialogu. Psychoterapeuta Gestalt nie jest „ekspertem od życia klienta”, nie daje gotowych
+        odpowiedzi ani rad — towarzyszy Ci w procesie odkrywania tego, co dla Ciebie ważne,
+        prawdziwe i potrzebne.
+      </p>
     </article>
 
     <article
       class="card"
       aria-label="Podczas sesji terapii Gestalt – świadomość, eksperymenty">
-      <h3>{{ gestalt.achievements.title }}:</h3>
+      <h3>Podczas sesji terapii Gestalt:</h3>
 
       <div class="card-content">
         <ul>
-          @for (p of gestalt.achievements.key_points; track $index) {
-            <li>{{ p }}</li>
-          }
+          <li><p>
+            uczysz się rozpoznawać i nazywać swoje emocje oraz potrzeby
+          </p></li>
+          <li><p>
+            zwiększysz świadomość swoich reakcji, schematów i sposobów kontaktu z innymi
+          </p></li>
+          <li><p>
+            zauważasz, co dzieje się w Twoim ciele, myślach i uczuciach
+          </p></li>
+          <li><p>
+            w bezpiecznych warunkach eksperymentujesz z nowymi sposobami bycia i reagowania
+          </p></li>
+          <li><p>
+            domykasz „niedokończone sprawy”, które wpływają na Twoje obecne życie
+          </p></li>
         </ul>
       </div>
 
-      @for (p of gestalt.achievements.content; track $index) {
-        <p>{{ p }}</p>
-      }
+      <p>
+        Terapia nie polega na dawaniu gotowych rad. Zamiast tego wspiera Cię w odnajdywaniu własnych
+        rozwiązań, wzmacnianiu autonomii i poczucia sprawczości.
+      </p>
     </article>
 
     <article
       class="card"
       aria-label="Dla kogo jest terapia Gestalt – trudności i potrzeby">
-      <h3>{{ gestalt.for_whom.title }}</h3>
+      <h3>Dla kogo jest terapia Gestalt?</h3>
 
-      <h4>{{ gestalt.for_whom.subtitle }}:</h4>
+      <h4>Psychoterapia Gestalt może być pomocna, jeśli:</h4>
       <div class="card-content">
         <ul>
-          @for (p of gestalt.for_whom.key_points; track $index) {
-            <li>{{ p }}</li>
-          }
+          <li><p>
+            doświadczasz trudności emocjonalnych, lęku, obniżonego nastroju lub poczucia pustki
+          </p></li>
+          <li><p>
+            masz problemy w relacjach lub czujesz się niezrozumiany/a
+          </p></li>
+          <li><p>
+            chcesz lepiej poznać siebie i żyć w zgodzie ze swoimi potrzebami
+          </p></li>
+          <li><p>
+            przechodzisz przez kryzys, zmianę, żałobę lub inny ważny moment życiowy
+          </p></li>
+          <li><p>
+            czujesz, że utknąłeś/utknęłaś i chcesz odzyskać kontakt ze sobą
+          </p></li>
         </ul>
       </div>
     </article>
@@ -66,11 +101,17 @@
     <article
       class="card"
       aria-label="Efekty terapii Gestalt i kontakt">
-      <h3>{{ gestalt.advantages.title }}</h3>
+      <h3>Co daje psychoterapia Gestalt?</h3>
 
-      @for (p of gestalt.advantages.content; track $index) {
-        <p>{{ p }}</p>
-      }
+      <p>
+        Efektem terapii Gestalt jest większa świadomość siebie, lepszy kontakt z emocjami i ciałem
+        oraz bardziej satysfakcjonujące relacje większym poczuciu wolności, autentyczności i
+        odpowiedzialności za własne wybory.
+      </p>
+      <p>
+        Terapia Gestalt to zaproszenie do spotkania z samym sobą — w sposób uważny, życzliwy i
+        prawdziwy.
+      </p>
 
       <app-button
         type="button"

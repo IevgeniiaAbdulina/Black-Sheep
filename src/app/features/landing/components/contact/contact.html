@@ -1,8 +1,3 @@
-@let individual_price = contact.price_list.individual.price;
-@let individual_time = contact.price_list.individual.time;
-@let couples_price = contact.price_list.couples.price;
-@let couples_time = contact.price_list.couples.time;
-
 <h2 id="contact-heading" class="section__title">Kontakt</h2>
 
 <div class="cards-grid">
@@ -35,12 +30,18 @@
          czasie.</p>
     </div>
 
-    <p><strong>Prowadzę gabinet psychoterapii Gestalt we Wrocławiu</strong> oraz oferuję możliwość
-                                                                            spotkań
-                                                                            online.</p>
+    <p>
+      <strong>Prowadzę gabinet psychoterapii Gestalt we Wrocławiu </strong>
+      oraz oferuję możliwość spotkań online.
+    </p>
 
-    <p><strong>Gabinet psychoterapii Gestalt – Wrocław Adres</strong>:<br>
-                                                                     ul. Racławicka 32 Wrocław</p>
+    <p><strong>Gabinet psychoterapii – Wrocław</strong>:</p>
+    <p>ul. Racławicka 32 Wrocław</p>
+
+    <p>Dojazd:</p>
+    <p>Autobus: 126, 133, 143 — przystanek Racławicka szkoła</p>
+    <p>Tramwaj: 2, 6, 7, 14, 17, 20 — przystanek Hallera</p>
+
     <div class="map-wrapper">
       <!-- Google Maps embed z lokalizacją (Wrocław, przykładowy adres z pinezką) -->
       <iframe
@@ -63,25 +64,25 @@
     class="card"
     aria-label="Formy pracy i formularz zgody na terapię">
 
-    <h3>Jak pracuję</h3>
-    <p>Oferuję psychoterapię Gestalt dla:</p>
+    <h3>Zasady współpracy</h3>
+    <p>Prowadzę psychoterapię Gestalt dla:</p>
 
     <div class="card-content">
       <ul>
-        <li><span>Osób dorosłych</span> (Formularz)</li>
-        <li><span>Par </span> (Formularz)</li>
-        <li><span>Młodzieży (od 16. roku życia)</span> (Formularz)</li>
+        <li><p>Osób dorosłych</p></li>
+        <li><p>Par </p></li>
+        <li><p>Młodzieży od 16. roku życia</p></li>
       </ul>
     </div>
     <!-- TODO: Add style for the download 'Formular' button -->
-    <!--    <a-->
-    <!--      download-->
-    <!--      href="assets/images/placeholder-mobile.png"-->
-    <!--      aria-label="Pobież formularz zgody na terapię dla młodzieży w formacie PDF">-->
-    <!--      <app-button type="button" buttonClass="btn action-button">-->
-    <!--        Pobierz formularz zgody na terapię (PDF)-->
-    <!--      </app-button>-->
-    <!--    </a>-->
+    <a
+      download
+      href="assets/images/placeholder-mobile.png"
+      aria-label="Pobież formularz zgody na terapię dla młodzieży w formacie PDF">
+      <app-button type="button" buttonClass="btn action-button">
+        Pobierz formularz zgody na terapię (PDF)
+      </app-button>
+    </a>
   </article>
 
   <article
@@ -91,10 +92,8 @@
 
     <h4>Cennik</h4>
     <ul class="list">
-      <li>Sesja indywidualna <strong>{{ individual_price }} zł</strong> / {{ individual_time }}
-          min
-      </li>
-      <li>Sesja dla par <strong>{{ couples_price }} zł</strong> / {{ couples_time }} min</li>
+      <li>Sesja indywidualna <strong>200 zł</strong> / 50 min</li>
+      <li>Sesja dla par <strong>300 zł</strong> / 60 min</li>
     </ul>
 
     <h4>Płatność</h4>
