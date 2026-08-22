@@ -1,15 +1,15 @@
 import {Component} from '@angular/core';
-import * as data from '../../data-access/contact-data.json';
 import {Button} from '../../../../shared/components/button/button';
+import {MatIcon} from '@angular/material/icon';
 
 @Component({
   selector: 'app-contact',
   imports: [
-    Button
+    Button,
+    MatIcon
   ],
   templateUrl: './contact.html',
   styleUrl: './contact.css',
 })
 export class Contact {
-  protected readonly contact = data;
 }

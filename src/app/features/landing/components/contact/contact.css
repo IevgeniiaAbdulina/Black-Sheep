@@ -42,3 +42,7 @@ h4 {
   text-decoration: underline;
 }
 
+.actions-wrapper {
+  width: fit-content;
+}
+
