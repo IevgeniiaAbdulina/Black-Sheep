@@ -24,6 +24,10 @@
   width: 100%;
   height: auto;
   object-fit: cover;
+
+  img {
+    z-index: 1000;
+  }
 }
 
 .wrap-center {
@@ -69,4 +73,54 @@
 
 /* Large Desktop Displays */
 @media (min-width: 1440px) {
+}
+
+.colors-example {
+  display: flex;
+  align-items: center;
+  gap: var(--gutter-md);
+
+  h3 {
+    color: var(--light-black)
+  }
+
+  & > * {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: clamp(1rem, 0.8rem + 0.91vw, 1.5rem);
+    font-weight: 700;
+    width: 100px;
+    height: 100px;
+    border-radius: 1rem;
+  }
+
+  .color-1 {
+    background-color: var(--green);
+  }
+
+  .color-2 {
+    background-color: var(--yellow);
+  }
+
+  .color-3 {
+    background-color: var(--green-yellow);
+  }
+
+  .color-4 {
+    background-color: var(--blue);
+  }
+
+  .color-5 {
+    background-color: var(--purple);
+  }
+
+  .color-6 {
+    background-color: var(--violet);
+  }
+
+  .color-7 {
+    background-color: var(--orange);
+  }
 }
