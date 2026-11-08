@@ -29,6 +29,18 @@
   --light-black: #403f3e;
   --dark-brown-gray: #e8ddd0;
 
+  /* Color Theme Palette */
+  --cream: #f8f3e0;
+  --yellow-warm: #fec200;
+  --forest-green: #266433;
+  --lime-green: #e2dc54;
+  --mint-green: #dfefca;
+  --deep-blue: #032f98;
+  --lavander: #d1c4e9;
+  --berry-purple: #6d2d59;
+  --sky-blue: #add0ee;
+  --tangerine: #f45c27;
+
   /* Grid & Spacing */
   --container-max: 1440px;
   --grid-columns: 12;
@@ -42,4 +54,35 @@
   --line-height-base: 1.6;
   --size-h1: 3.5rem;
   --size-body: 1.2rem;
+
+  /* Accessibility */
+  --color-focus: var(--tangerine);
+}
+
+/* Green Theme Override (default) green/forest palette */
+[data-theme="green"] {
+  --bg-color: #f5f7f5;
+  --primary-color: #2c5e3a;
+  --accent-color: #4a8c5c;
+  --card-bg: #eaf0ea;
+  --text-primary: #1a2e1f;
+  --section-border: #2c5e3a;
+  --card-heading: #2c5e3a;
+  --link-color: #3a7a4d;
+  --yellow: #d4c842;
+  --green: #4a8c5c;
+}
+
+/* Yellow Theme Override warm/yellow palette */
+[data-theme="yellow"] {
+  --bg-color: #fffdf5;
+  --primary-color: #f0b420;
+  --accent-color: #e6b422;
+  --card-bg: #fdf8e8;
+  --text-primary: #2e2a1a;
+  --section-border: #c49a2a;
+  --card-heading: #c49a2a;
+  --link-color: #b8860b;
+  --yellow: #e6b422;
+  --green: #5a8a3c;
 }

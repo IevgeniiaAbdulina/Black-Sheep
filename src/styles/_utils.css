@@ -27,10 +27,10 @@
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: -0.01em;
-  border-left: 6px solid var(--yellow);
+  border-left: 6px solid var(--primary-color);
   padding-left: 1rem;
   margin-bottom: 2rem;
-  color: #2c3e2f;
+  color: var(--text-primary);
   line-height: 1.2;
 }
 
@@ -50,7 +50,7 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  border: 1px solid #e9e2d9;
+  border: 1px solid var(--section-border);
 }
 
 .card-content li {
@@ -63,7 +63,7 @@
 
 .card-content li::before {
   content: "✦";
-  color: #eab308;
+  color: var(--accent-color);
   font-weight: 600;
   position: absolute;
   left: 0;
@@ -75,19 +75,19 @@
   font-weight: 600;
   margin-top: 0.2rem;
   margin-bottom: 1rem;
-  color: var(--yellow);
-  border-left: 3px solid #e2bc9a;
+  color: var(--text-primary);
+  border-left: 3px solid var(--accent-color);
   padding-left: 0.75rem;
 }
 
 .card p {
   margin-bottom: 1rem;
-  color: #2c3e2f;
+  color: var(--text-primary);
 }
 
 .card ul {
   margin: 0.75rem 0 1rem 1.5rem;
-  color: #2c3e2f;
+  color: var(--text-primary);
 }
 
 .card li {
@@ -95,7 +95,7 @@
 }
 
 .card strong {
-  color: var(--yellow);
+  color: var(--accent-color);
   font-weight: 600;
 }
 
@@ -130,7 +130,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  color: var(--yellow);
+  color: var(--link-color);
   font-weight: 500;
   margin-top: 0.75rem;
   text-decoration: underline;
@@ -138,7 +138,7 @@
 }
 
 .nav-link:hover {
-  color: var(--yellow);
+  color: var(--accent-color);
 }
 
 /* Responsive */
@@ -173,7 +173,7 @@ hr {
 
 /* Focus is visible for the entire page */
 :focus-visible {
-  outline: 3px solid var(--yellow);
+  outline: 3px solid var(--accent-color);
   outline-offset: 2px;
   border-radius: 4px;
 }

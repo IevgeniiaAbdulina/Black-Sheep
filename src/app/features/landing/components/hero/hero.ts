@@ -1,6 +1,5 @@
 import {Component, inject} from '@angular/core';
 import {NgOptimizedImage} from '@angular/common';
-import * as data from '../../data-access/hero-data.json';
 import {Button} from '../../../../shared/components/button/button';
 import {Router} from '@angular/router';
 
@@ -12,7 +11,6 @@ import {Router} from '@angular/router';
 })
 export class Hero {
   protected router = inject(Router);
-  protected readonly hero = data;
 
   goToContact(): void {
     this.router.navigate(['/'], {fragment: 'contact'});

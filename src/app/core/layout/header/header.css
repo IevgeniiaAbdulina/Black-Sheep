@@ -133,3 +133,45 @@ a {
     display: flex;
   }
 }
+
+/* Theme switcher */
+.theme-swatch .green {
+  background-color: var(#4a8c5c);
+}
+
+.theme-swatch .yellow {
+  background-color: var(#e6b422);
+}
+
+.theme-picker {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  margin-right: 1rem;
+}
+
+.theme-picker-label {
+  font-size: 0.9rem;
+  color: var(--light-black);
+}
+
+.theme-swatch {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid var(--light-brown-gray);
+  cursor: pointer;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+  padding: 0;
+}
+
+.theme-swatch:hover {
+  transform: scale(1.15);
+}
+
+.theme-swatch.active {
+  border-color: var(--accent-color);
+  border-width: 3px;
+  transform: scale(1.1);
+}

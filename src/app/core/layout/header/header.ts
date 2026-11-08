@@ -2,6 +2,7 @@ import {Component, inject, signal} from '@angular/core';
 import {NgOptimizedImage} from '@angular/common';
 import {Button} from '../../../shared/components/button/button';
 import {Router} from '@angular/router';
+import {ThemeService} from '../../services/theme-service';
 
 @Component({
   selector: 'app-header',
@@ -13,7 +14,9 @@ import {Router} from '@angular/router';
   styleUrl: './header.css',
 })
 export class Header {
-  router = inject(Router)
+  router = inject(Router);
+  protected themeService = inject(ThemeService);
+
   isSidenavOpen = signal(false);
 
   toggleSidenav(): void {
@@ -26,5 +29,9 @@ export class Header {
 
   goToAboutGestalt(): void {
     this.router.navigate(['/about-gestalt']);
+  }
+
+  setTheme(theme: 'green' | 'yellow'): void {
+    this.themeService.setTheme(theme);
   }
 }
