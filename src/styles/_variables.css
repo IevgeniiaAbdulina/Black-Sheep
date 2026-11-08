@@ -61,16 +61,61 @@
 
 /* Green Theme Override (default) green/forest palette */
 [data-theme="green"] {
-  --bg-color: #f5f7f5;
-  --primary-color: #2c5e3a;
-  --accent-color: #4a8c5c;
-  --card-bg: #eaf0ea;
-  --text-primary: #1a2e1f;
-  --section-border: #2c5e3a;
-  --card-heading: #2c5e3a;
-  --link-color: #3a7a4d;
-  --yellow: #d4c842;
-  --green: #4a8c5c;
+  /*--bg-color: #f5f7f5;*/
+  /*--primary-color: #2c5e3a;*/
+  /*--accent-color: #4a8c5c;*/
+  /*--card-bg: #eaf0ea;*/
+  /*--text-primary: #1a2e1f;*/
+  /*--section-border: #2c5e3a;*/
+  /*--card-heading: #2c5e3a;*/
+  /*--link-color: #3a7a4d;*/
+  /*--yellow: #d4c842;*/
+  /*--green: #4a8c5c;*/
+
+  /* Warm Sage */
+  /*--bg-color: #f5f1e8;*/
+  /*--primary-color: #6f7d64;*/
+  /*--accent-color: #a67c52;*/
+  /*--card-bg: #fbf8f0;*/
+  /*--text-primary: #2f3a2f;*/
+  /*--section-border: #d8d0bf;*/
+  /*--card-heading: #465541;*/
+  /*--link-color: #4f6247;*/
+  /*--yellow: #f0b420;*/
+  /*--green: #7a8b6f;*/
+
+  --bg-color: #f6f1e7;
+  --primary-color: #6e8069;
+  --accent-color: #b9825e;
+  --card-bg: #fcf9f2;
+  --text-primary: #2e352c;
+  --section-border: #dcd3c4;
+  --card-heading: #485744;
+  --link-color: #50644b;
+  --yellow: #f0b420;
+  --green: #7d9074;
+
+  /*--bg-color: #f1ece3;*/
+  /*--primary-color: #5f7a6e;*/
+  /*--accent-color: #c08a6a;*/
+  /*--card-bg: #faf6ee;*/
+  /*--text-primary: #2a332f;*/
+  /*--section-border: #d5ccbf;*/
+  /*--card-heading: #3f5a4e;*/
+  /*--link-color: #46685a;*/
+  /*--yellow: #d8b778;*/
+  /*--green: #6f8c7d;*/
+
+  /*--bg-color: #e9e2d1;*/
+  /*--primary-color: #53694d;*/
+  /*--accent-color: #a66a45;*/
+  /*--card-bg: #f3eddf;*/
+  /*--text-primary: #243024;*/
+  /*--section-border: #c9bea8;*/
+  /*--card-heading: #384b35;*/
+  /*--link-color: #435a3e;*/
+  /*--yellow: #c59a49;*/
+  /*--green: #5f7557;*/
 }
 
 /* Yellow Theme Override warm/yellow palette */

@@ -30,14 +30,14 @@
           type="button"
           class="theme-swatch green"
           [class.active]="themeService.currentTheme() === 'green'"
-          style="background-color: #4a8c5c;"
+          style="background-color: var(--green);"
           (click)="setTheme('green')"
           aria-label="Switch to green theme"></button>
         <button
           type="button"
           class="theme-swatch yellow"
           [class.active]="themeService.currentTheme() === 'yellow'"
-          style="background-color: #e6b422;"
+          style="background-color: var(--yellow);"
           (click)="setTheme('yellow')"
           aria-label="Switch to yellow theme"></button>
       </div>
